@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Services from "../views/Services.vue";
-import Approach from "../views/Approach.vue";
+
 import Team from "../views/Team.vue";
 import Contact from "../views/Contact.vue";
 import NotFound from "../views/NotFound.vue";
@@ -47,15 +47,6 @@ const router = createRouter({
       component: Services,
       meta: {
         journey: "explore",
-      },
-    },
-
-    {
-      path: "/approach",
-      name: "Approach",
-      component: Approach,
-      meta: {
-        journey: "understand",
       },
     },
 

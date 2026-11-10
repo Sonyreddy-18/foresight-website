@@ -1,13 +1,13 @@
 <template>
   <div class="min-h-screen overflow-x-hidden bg-[#f7f6f2] text-[#263b35]">
-    <!-- CINEMATIC HERO — KEPT -->
+    <!-- REFINED HERO -->
     <section
-      class="relative h-[100svh] min-h-[680px] overflow-hidden bg-[#263b35]"
+      class="foresight-hero relative min-h-[720px] h-[100svh] overflow-hidden bg-[#1d302b]"
     >
       <div
         v-for="(slide, index) in heroSlides"
         :key="slide.image"
-        class="absolute inset-0 transition-opacity duration-[1800ms] ease-in-out"
+        class="absolute inset-0 transition-opacity duration-[1600ms] ease-in-out"
         :class="activeHero === index ? 'opacity-100' : 'opacity-0'"
       >
         <img
@@ -16,25 +16,28 @@
           class="hero-image absolute inset-0 h-full w-full object-cover"
           :class="activeHero === index ? 'hero-image-active' : ''"
         />
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-[#071411]/55 via-[#071411]/28 to-[#071411]/5"
-        ></div>
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-[#071411]/45 via-[#071411]/8 to-transparent"
-        ></div>
       </div>
+      <div class="hero-overlay absolute inset-0"></div>
 
       <div
-        class="absolute left-0 right-0 top-0 z-20 px-6 pt-28 sm:px-10 lg:px-16"
+        class="absolute inset-x-0 top-0 z-20 px-6 pt-7 sm:px-10 lg:px-16 lg:pt-9"
       >
-        <div class="flex items-center justify-between">
-          <div
-            class="text-[10px] font-semibold tracking-[0.28em] text-white/80 uppercase"
+        <div
+          class="flex items-center justify-between border-b border-white/25 pb-5"
+        >
+          <a
+            href="#top"
+            class="hero-brand text-white"
+            aria-label="Foresight home"
+            >FORESIGHT<span>®</span></a
           >
-            Psychological & Psychosocial Care
+          <div
+            class="hidden text-[10px] font-medium tracking-[0.28em] text-white/75 uppercase sm:block"
+          >
+            Psychological care · Hyderabad, India
           </div>
           <div
-            class="hidden text-[10px] tracking-[0.25em] text-white/60 uppercase sm:block"
+            class="text-[9px] font-medium tracking-[0.2em] text-white/65 uppercase sm:hidden"
           >
             Hyderabad · India
           </div>
@@ -42,71 +45,79 @@
       </div>
 
       <div
-        class="relative z-10 mx-auto flex h-full max-w-[1500px] items-end px-6 pb-16 sm:px-10 sm:pb-20 lg:px-16 lg:pb-24"
+        class="relative z-10 mx-auto flex h-full max-w-[1500px] items-center px-6 pb-10 pt-28 sm:px-10 lg:px-16"
       >
-        <div class="w-full">
-          <div class="hero-content-panel max-w-5xl">
+        <div
+          class="hero-layout grid w-full items-end gap-12 lg:grid-cols-[minmax(0,1fr)_220px]"
+        >
+          <div class="max-w-[980px]">
             <p
-              class="mb-5 text-[10px] font-semibold tracking-[0.32em] text-white/75 uppercase"
+              class="hero-kicker mb-7 flex items-center gap-4 text-[10px] font-semibold tracking-[0.32em] text-[#e4c9a8] uppercase"
             >
-              FORESIGHT
+              <span class="h-px w-10 bg-[#d8b995]"></span>
+              A thoughtful space for emotional wellbeing
             </p>
-            <div class="hero-copy-wrap">
-              <h1
-                :key="activeHero"
-                class="hero-copy text-[clamp(3.5rem,8vw,8.5rem)] font-light leading-[0.88] tracking-[-0.065em] text-[#fffdf8]"
-              >
-                {{ heroSlides[activeHero].title }}
-              </h1>
-            </div>
+            <h1
+              :key="activeHero"
+              class="hero-copy max-w-[980px] text-[clamp(3.8rem,8.2vw,8.4rem)] leading-[0.88] tracking-[-0.055em] text-[#fffaf2]"
+            >
+              <span class="hero-title-text">{{
+                heroSlides[activeHero].title
+              }}</span>
+            </h1>
             <p
               :key="`description-${activeHero}`"
-              class="hero-description mt-7 max-w-xl text-base leading-7 text-[#fffdf8]/90 sm:text-lg"
+              class="hero-description mt-8 max-w-[570px] text-base leading-8 text-white/85 sm:text-lg"
             >
               {{ heroSlides[activeHero].description }}
             </p>
-            <div class="mt-8 flex flex-wrap items-center gap-5">
+            <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-5">
               <a
                 href="#appointment"
-                class="group inline-flex items-center gap-5 bg-white px-6 py-4 text-[10px] font-semibold tracking-[0.2em] text-[#263b35] uppercase transition duration-500 hover:bg-[#c4ad91] hover:text-white"
+                class="hero-primary-cta group inline-flex items-center gap-8"
               >
-                Book an Appointment
-                <span
-                  class="text-base transition-transform duration-500 group-hover:translate-x-2"
-                  >→</span
+                <span>Begin a conversation</span
+                ><span
+                  class="text-xl transition-transform duration-300 group-hover:translate-x-2"
+                  >↗</span
                 >
               </a>
-              <a
-                href="#services"
-                class="group inline-flex items-center gap-3 text-[10px] font-semibold tracking-[0.2em] text-white uppercase"
+              <a href="#services" class="hero-secondary-cta"
+                >Explore our approach <span>⟶</span></a
               >
-                Explore Foresight
-                <span
-                  class="h-px w-7 bg-white transition-all duration-500 group-hover:w-12"
-                ></span>
-              </a>
             </div>
           </div>
-
-          <div
-            class="mt-14 flex items-end justify-between border-t border-white/20 pt-5"
-          >
-            <p
-              class="max-w-xs text-[9px] leading-5 tracking-[0.16em] text-white/55 uppercase"
-            >
-              Clinical understanding.<br />Human connection.
+          <div class="hidden justify-self-end pb-2 text-right lg:block">
+            <p class="text-[9px] tracking-[0.25em] text-white/55 uppercase">
+              A place to be heard
             </p>
-            <div
-              class="hidden items-center gap-3 text-[9px] tracking-[0.2em] text-white/60 uppercase sm:flex"
-            >
-              Scroll to explore
-              <span class="relative h-8 w-px overflow-hidden bg-white/25">
-                <span
-                  class="hero-scroll-line absolute left-0 top-0 h-4 w-px bg-white"
-                ></span>
-              </span>
+            <p class="mt-3 font-serif text-4xl italic text-[#e4c9a8]">
+              With care.
+            </p>
+            <div class="mt-8 flex items-center justify-end gap-2">
+              <span
+                v-for="(slide, index) in heroSlides"
+                :key="slide.image"
+                class="hero-indicator"
+                :class="activeHero === index ? 'hero-indicator-active' : ''"
+              ></span>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div
+        class="absolute inset-x-6 bottom-7 z-20 flex items-end justify-between border-t border-white/25 pt-4 sm:inset-x-10 lg:inset-x-16"
+      >
+        <p
+          class="text-[9px] leading-5 tracking-[0.2em] text-white/65 uppercase"
+        >
+          Clinical understanding.<br />Human connection.
+        </p>
+        <div
+          class="flex items-center gap-3 text-[9px] tracking-[0.2em] text-white/65 uppercase"
+        >
+          Scroll to explore <span class="hero-scroll-mark"></span>
         </div>
       </div>
     </section>
@@ -414,137 +425,6 @@
       </div>
     </section>
 
-    <!-- NEW 03 — MIND JOURNEY -->
-    <section
-      id="journey"
-      class="overflow-hidden bg-[#f7f6f2] px-6 py-16 sm:px-10 lg:px-16 lg:py-20"
-    >
-      <div class="mx-auto max-w-[1450px]">
-        <div class="grid gap-12 lg:grid-cols-[0.35fr_0.65fr]">
-          <div>
-            <p
-              class="text-[10px] font-semibold tracking-[0.3em] text-[#9a7d60] uppercase"
-            >
-              05 / THE MIND JOURNEY
-            </p>
-          </div>
-          <div>
-            <h2
-              class="text-[clamp(3rem,6vw,6.5rem)] font-light leading-[0.9] tracking-[-0.06em]"
-            >
-              From feeling stuck<br />to
-              <span class="text-[#9a7d60]">moving forward.</span>
-            </h2>
-            <div class="journey-track mt-16">
-              <button
-                v-for="(item, index) in journey"
-                :key="item.title"
-                type="button"
-                class="journey-step group"
-                :class="{ 'journey-step-active': journeyStep === index }"
-                @click="journeyStep = index"
-              >
-                <span class="journey-number">0{{ index + 1 }}</span>
-                <span class="journey-title">{{ item.title }}</span>
-                <span class="journey-dot"></span>
-              </button>
-            </div>
-            <div class="mt-10 min-h-[150px] border-t border-[#263b35]/15 pt-8">
-              <transition name="soft-fade" mode="out-in">
-                <div :key="journeyStep">
-                  <p
-                    class="text-2xl font-light leading-tight tracking-[-0.03em] sm:text-3xl"
-                  >
-                    {{ journey[journeyStep].statement }}
-                  </p>
-                  <p class="mt-4 max-w-2xl text-sm leading-7 text-[#687671]">
-                    {{ journey[journeyStep].description }}
-                  </p>
-                </div>
-              </transition>
-              <div class="mt-7 flex flex-wrap items-center gap-3">
-                <button
-                  type="button"
-                  class="journey-control"
-                  :disabled="journeyStep === 0"
-                  @click="previousJourneyStep"
-                >
-                  ← Previous
-                </button>
-                <button
-                  type="button"
-                  class="journey-control"
-                  :disabled="journeyStep === journey.length - 1"
-                  @click="nextJourneyStep"
-                >
-                  Next →
-                </button>
-                <button
-                  type="button"
-                  class="journey-next-button"
-                  @click="continueFromJourney"
-                >
-                  Continue to conversation →
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- APPROACH — KEPT -->
-    <section
-      id="approach"
-      class="bg-[#263b35] px-6 py-24 text-white sm:px-10 lg:px-16 lg:py-32"
-    >
-      <div class="mx-auto max-w-[1450px]">
-        <div class="grid gap-16 lg:grid-cols-[0.35fr_0.65fr]">
-          <div>
-            <p
-              class="text-[10px] font-semibold tracking-[0.3em] text-[#c4ad91] uppercase"
-            >
-              06 / OUR APPROACH
-            </p>
-            <h2
-              class="mt-6 text-[clamp(3rem,6vw,6.3rem)] font-light leading-[0.9] tracking-[-0.06em]"
-            >
-              Understand.
-              <span class="text-[#c4ad91]">Formulate.</span> Intervene. Grow.
-            </h2>
-          </div>
-          <div>
-            <p class="max-w-2xl text-base leading-8 text-white/60">
-              We follow a structured yet individualized approach to understand
-              concerns and develop appropriate psychological and psychosocial
-              strategies.
-            </p>
-            <div class="mt-14">
-              <div
-                v-for="(step, index) in approach"
-                :key="step.title"
-                class="approach-row group grid gap-5 border-t border-white/15 py-8 sm:grid-cols-[70px_1fr_1fr] sm:items-start"
-              >
-                <span class="text-[10px] tracking-[0.2em] text-[#c4ad91]"
-                  >0{{ index + 1 }}</span
-                >
-                <h3
-                  class="text-3xl font-light tracking-[-0.04em] transition duration-300 group-hover:text-[#c4ad91]"
-                >
-                  {{ step.title }}
-                </h3>
-                <p class="text-sm leading-7 text-white/50">
-                  {{ step.description }}
-                </p>
-              </div>
-              <div class="border-t border-white/15"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- NEW 04 — CONVERSATION -->
     <section
       id="conversation"
       class="bg-white px-6 py-16 sm:px-10 lg:px-16 lg:py-20"
@@ -819,7 +699,7 @@
     <!-- PHILOSOPHY — KEPT -->
     <section class="relative min-h-[620px] overflow-hidden">
       <img
-        src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1800&q=85"
+        src="https://static2.tripoto.com/media/filter/tst/img/384592/TripDocument/1492058183_15056331_1341875539180565_1487898178506873266_n.jpg.webp"
         alt="Quiet reflective space"
         class="philosophy-image absolute inset-0 h-full w-full object-cover"
       />
@@ -1000,7 +880,7 @@
           <a href="#services" class="transition hover:text-[#9a7d60]"
             >Services</a
           >
-          <a href="#approach" class="transition hover:text-[#9a7d60]"
+          <a href="#why-foresight" class="transition hover:text-[#9a7d60]"
             >Approach</a
           >
           <a href="#check-in" class="transition hover:text-[#9a7d60]"
@@ -1050,31 +930,30 @@ const currentYear = new Date().getFullYear();
 const heroSlides = [
   {
     image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=2200&q=90",
-    alt: "Portrait",
+      "https://storage.googleapis.com/open-files-app/Blogs%20Images/glp1-pcos-insulin-resistance-india-women.webp",
+    alt: "South Asian couple sharing a thoughtful conversation outdoors",
     title: "Understand Yourself.",
     description:
       "At Foresight Counselling Centre, we provide professional psychological and psychosocial support for individuals, couples and families.",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=2200&q=90",
-    alt: "People connecting",
+      "https://static.tildacdn.com/tild3339-3666-4565-a661-623138313538/vws.png?utm_source=chatgpt.com",
+    alt: "Indian women in a supportive counselling conversation",
     title: "Strengthen Relationships.",
     description:
       "Our approach combines clinical experience, psychological understanding and psychosocial perspectives to understand concerns in their personal, behavioural, relational and social context.",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=90",
-    alt: "People together",
+      "https://krishnabhumi.in/images/elder-living/pillar-5/depression-older-adults.jpg",
+    alt: "Indian older couple seated together",
     title: "Shape Your Future.",
     description: "We believe that meaningful change begins with understanding.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=2200&q=90",
-    alt: "Calm environment",
+    image: "https://asrcharitabletrust.org/10.10.png",
+    alt: "Indian family in a warm counselling setting",
     title: "Meaningful Change.",
     description: "Understand the Present. Shape the Future.",
   },
@@ -1088,15 +967,14 @@ const services = [
     title: "Individual Counselling",
     href: "#appointment",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1400&q=85",
+      "https://ddurga.dpdns.org/images/psychologist-chennai-consultation.jpg",
     description:
       "Professional support for emotional, behavioural and personal concerns. Our interventions may include CBT-informed techniques, psychoeducation, emotional regulation, behavioural strategies, problem-solving and coping-skills training, depending on individual needs.",
   },
   {
     title: "Family Counselling",
     href: "#appointment",
-    image:
-      "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=1400&q=85",
+    image: "https://www.asrcharitabletrust.org/10.7.png",
     description:
       "Understanding relationships, communication and family dynamics. We work with families experiencing communication difficulties, parenting concerns, interpersonal conflicts, behavioural concerns and adjustment difficulties.",
   },
@@ -1104,23 +982,21 @@ const services = [
     title: "Couple & Relationship Counselling",
     href: "#appointment",
     image:
-      "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1400&q=85",
+      "https://saanthwana.com/assets/images/backgrounds/relationship-counselling.png",
     description:
       "A structured space to understand relationship patterns and develop healthier communication. Sessions may focus on communication, conflict resolution, emotional connection, expectations and relationship adjustment.",
   },
   {
     title: "Child & Adolescent Support",
     href: "#appointment",
-    image:
-      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1400&q=85",
+    image: "https://pcprd.azureedge.net/content/7e29a13d2a6a.jpg",
     description:
       "Children and adolescents may express emotional difficulties through changes in behaviour, academics, relationships or social functioning. Our approach considers the child, family and environmental context while developing appropriate psychological and psychosocial interventions.",
   },
   {
     title: "Psychological Assessment",
     href: "#appointment",
-    image:
-      "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=1400&q=85",
+    image: "https://www.iipr.in/images/behavioural_therapist.webp",
     description:
       "Professional psychological assessment can help develop a clearer understanding of cognitive, emotional, behavioural and personality-related functioning. Assessments are selected according to the individual's clinical requirements.",
   },
@@ -1128,7 +1004,7 @@ const services = [
     title: "De-addiction & Recovery Support",
     href: "#appointment",
     image:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=85",
+      "https://cache.careers360.mobi/media/schools/social-media/media-gallery/36322/2025/3/11/Admission.png",
     description:
       "Substance-use difficulties require an understanding of the psychological, behavioural and social factors involved in addiction. Support may incorporate Motivational Interviewing, Relapse Prevention, CBT-informed interventions, craving and trigger management, family interventions and psychoeducation.",
   },
@@ -1198,40 +1074,6 @@ const breathPhase = ref("Breathe in");
 const breathInstruction = ref("Slowly");
 let breathTimer = null;
 
-const journeyStep = ref(0);
-const journey = [
-  {
-    title: "Notice",
-    statement: "Something feels different.",
-    description:
-      "You notice a change in mood, behaviour, relationships, thoughts or everyday functioning.",
-  },
-  {
-    title: "Understand",
-    statement: "Let's make sense of it.",
-    description:
-      "Understanding the context can help separate what is happening from the judgment you may place on yourself.",
-  },
-  {
-    title: "Support",
-    statement: "You don't have to carry it alone.",
-    description:
-      "Professional support creates a structured and confidential space to explore concerns.",
-  },
-  {
-    title: "Strengthen",
-    statement: "Build what helps you cope.",
-    description:
-      "The work can focus on practical skills, relationships, emotional regulation and adaptive functioning.",
-  },
-  {
-    title: "Forward",
-    statement: "Move forward with understanding.",
-    description:
-      "Change does not have to mean becoming someone else. It can mean understanding yourself more clearly.",
-  },
-];
-
 const conversationStep = ref(1);
 const conversation = computed(() => [
   {
@@ -1282,67 +1124,6 @@ const visitSteps = [
     title: "Plan the next step",
     description:
       "Together, the appropriate form of support, assessment or intervention can be discussed.",
-  },
-];
-
-const realisationLines = [
-  {
-    text: "You might still be functioning.",
-    message:
-      "Functioning on the outside does not tell the whole story of how you are doing inside.",
-  },
-  {
-    text: "Going to work.",
-    message:
-      "Keeping up with responsibilities can coexist with feeling emotionally stretched.",
-  },
-  {
-    text: "Talking to people.",
-    message:
-      "Being connected to others does not mean you have to handle every difficult feeling alone.",
-  },
-  {
-    text: "Smiling.",
-    message:
-      "A smile can be genuine and still not capture everything someone is carrying.",
-  },
-  {
-    text: "Getting things done.",
-    message: "Productivity is not a measure of whether you deserve support.",
-  },
-  {
-    text: "And still not feel like yourself.",
-    message:
-      "If something feels different, you can make space to understand it without needing a perfect explanation.",
-  },
-];
-
-const revealedRealisation = ref(null);
-
-const approach = [
-  {
-    title: "Understand",
-    description: "Explore the presenting concern and individual context.",
-  },
-  {
-    title: "Assess",
-    description:
-      "Identify relevant psychological, behavioural and psychosocial factors.",
-  },
-  {
-    title: "Formulate",
-    description:
-      "Develop a meaningful understanding of the patterns contributing to the concern.",
-  },
-  {
-    title: "Intervene",
-    description:
-      "Use appropriate evidence-informed psychological and psychosocial strategies.",
-  },
-  {
-    title: "Strengthen",
-    description:
-      "Build coping, emotional regulation, communication and adaptive functioning.",
   },
 ];
 
@@ -1433,8 +1214,6 @@ const team = [
   },
 ];
 
-const experienceStep = ref(1);
-
 const breathingContext = computed(() => {
   if (selectedFeeling.value)
     return `You selected “${currentFeeling.value.label}”. Before we try to understand it, give yourself one quiet minute to slow things down.`;
@@ -1448,16 +1227,6 @@ const visitContext = computed(() => {
 });
 
 const scrollToFeature = (id) => {
-  experienceStep.value = Number(
-    {
-      check: 1,
-      breathe: 2,
-      journey: 3,
-      conversation: 4,
-      visit: 5,
-      realisation: 6,
-    }[id] || 1,
-  );
   document
     .getElementById(id)
     ?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1469,11 +1238,6 @@ const continueFromFeeling = () => {
 };
 
 const continueFromBreath = () => {
-  setStage("explore");
-  scrollToFeature("journey");
-};
-
-const continueFromJourney = () => {
   setStage("connect");
   scrollToFeature("conversation");
 };
@@ -1488,16 +1252,7 @@ const selectFeeling = (id) => {
   selectedFeeling.value = id;
   setFeeling(id);
   setStage("notice");
-  experienceStep.value = 1;
   conversationStep.value = 1;
-};
-
-const previousJourneyStep = () => {
-  journeyStep.value = Math.max(0, journeyStep.value - 1);
-};
-
-const nextJourneyStep = () => {
-  journeyStep.value = Math.min(journey.length - 1, journeyStep.value + 1);
 };
 
 const startBreathing = () => {
@@ -1558,25 +1313,113 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.hero-image {
-  transform: scale(1.04);
-  opacity: 1;
-  filter: none;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap");
+
+.foresight-hero {
+  isolation: isolate;
 }
-.hero-content-panel {
-  padding: 24px 28px 26px;
-  border-left: 2px solid rgba(196, 173, 145, 0.9);
-  background: linear-gradient(
-    90deg,
-    rgba(7, 20, 17, 0.72),
-    rgba(7, 20, 17, 0.34),
-    transparent
-  );
-  text-shadow: 0 3px 22px rgba(0, 0, 0, 0.42);
-  backdrop-filter: blur(2px);
+.hero-image {
+  transform: scale(1.025);
+  object-position: center 42%;
+  opacity: 1;
+  filter: brightness(0.9) saturate(0.88);
+}
+.hero-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(13, 29, 25, 0.82) 0%,
+      rgba(13, 29, 25, 0.58) 42%,
+      rgba(13, 29, 25, 0.12) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(13, 29, 25, 0.58) 0%,
+      transparent 45%,
+      rgba(13, 29, 25, 0.18) 100%
+    );
+}
+.hero-brand {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.34em;
+  text-decoration: none;
+}
+.hero-brand span {
+  margin-left: 3px;
+  font-size: 8px;
+  vertical-align: top;
 }
 .hero-copy {
-  text-shadow: 0 5px 30px rgba(0, 0, 0, 0.48);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-weight: 400;
+  text-wrap: balance;
+  text-shadow: 0 8px 35px rgba(0, 0, 0, 0.24);
+}
+.hero-title-text {
+  display: inline-block;
+  color: #fffaf2;
+  animation: heroTitleGlow 7s ease-in-out infinite alternate;
+}
+.hero-description {
+  font-family: "Manrope", sans-serif;
+}
+.hero-primary-cta {
+  min-height: 58px;
+  padding: 0 23px;
+  background: #f4eee4;
+  color: #243a33;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+.hero-primary-cta:hover {
+  background: #d8b995;
+  color: #17251f;
+  transform: translateY(-2px);
+}
+.hero-secondary-cta {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.hero-secondary-cta span {
+  margin-left: 10px;
+  color: #e4c9a8;
+  transition: margin 0.3s ease;
+}
+.hero-secondary-cta:hover span {
+  margin-left: 16px;
+}
+.hero-indicator {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.42);
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+.hero-indicator-active {
+  width: 38px;
+  background: #e4c9a8;
+}
+.hero-scroll-mark {
+  width: 1px;
+  height: 27px;
+  background: #e4c9a8;
+  display: inline-block;
 }
 .journey-next-button {
   display: inline-flex;
@@ -1624,15 +1467,6 @@ onUnmounted(() => {
   border-color: rgba(154, 125, 96, 0.65);
   box-shadow: inset 3px 0 0 #9a7d60;
 }
-.realisation-section {
-  background-image:
-    radial-gradient(
-      ellipse at 85% 15%,
-      rgba(154, 125, 96, 0.16),
-      transparent 38%
-    ),
-    linear-gradient(135deg, #101c19 0%, #1c3029 100%);
-}
 
 .hero-image-active {
   animation: cinematicMove 7s ease-in-out forwards;
@@ -1648,20 +1482,10 @@ onUnmounted(() => {
 }
 
 .service-card,
-.context-card,
 .team-card,
 .feeling-card,
-.journey-step,
 .visit-step {
   cursor: pointer;
-}
-.approach-row {
-  transition:
-    padding-left 400ms ease,
-    background-color 400ms ease;
-}
-.approach-row:hover {
-  padding-left: 12px;
 }
 .philosophy-image {
   animation: philosophyMove 14s ease-in-out infinite alternate;
@@ -1693,10 +1517,7 @@ onUnmounted(() => {
   color: rgba(255, 255, 255, 0.6);
 }
 .feeling-card:focus-visible,
-.journey-step:focus-visible,
-.visit-step:focus-visible,
-.realisation-line:focus-visible,
-.journey-control:focus-visible {
+.visit-step:focus-visible {
   outline: 2px solid #9a7d60;
   outline-offset: 4px;
 }
@@ -1726,76 +1547,6 @@ onUnmounted(() => {
 }
 .breathing-active {
   animation: breathing 12s ease-in-out infinite;
-}
-
-.journey-track {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(130px, 1fr));
-  position: relative;
-}
-.journey-track::before {
-  content: "";
-  position: absolute;
-  left: 4%;
-  right: 4%;
-  top: 48px;
-  height: 1px;
-  background: rgba(38, 59, 53, 0.15);
-}
-.journey-step {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  min-height: 120px;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 10px;
-}
-.journey-number {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  color: #9a7d60;
-}
-.journey-title {
-  font-size: 22px;
-  font-weight: 300;
-  letter-spacing: -0.03em;
-}
-.journey-dot {
-  margin-top: 5px;
-  height: 11px;
-  width: 11px;
-  border-radius: 9999px;
-  border: 1px solid #9a7d60;
-  background: #f7f6f2;
-  transition:
-    transform 0.4s ease,
-    background-color 0.4s ease;
-}
-.journey-step-active .journey-dot {
-  transform: scale(1.5);
-  background: #9a7d60;
-}
-.journey-control {
-  border: 1px solid rgba(38, 59, 53, 0.15);
-  padding: 10px 14px;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    opacity 0.3s ease;
-}
-.journey-control:hover:not(:disabled) {
-  background: #263b35;
-  color: white;
-}
-.journey-control:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
 }
 
 .chat-bubble {
@@ -1835,22 +1586,6 @@ onUnmounted(() => {
   padding-bottom: 34px;
 }
 
-.realisation-line {
-  border: 0;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-  font-size: clamp(2.7rem, 7vw, 7.5rem);
-  font-weight: 300;
-  line-height: 0.95;
-  letter-spacing: -0.06em;
-  color: rgba(255, 255, 255, 0.22);
-  transition: color 0.6s ease;
-}
-.realisation-line:hover,
-.realisation-line-active {
-  color: #fff;
-}
 .chat-reveal-enter-active,
 .chat-reveal-leave-active {
   transition:
@@ -1892,6 +1627,24 @@ onUnmounted(() => {
   }
   100% {
     transform: scale(1.08);
+  }
+}
+@keyframes heroTitleGlow {
+  from {
+    filter: drop-shadow(0 3px 18px rgba(196, 173, 145, 0.08));
+  }
+  to {
+    filter: drop-shadow(0 5px 28px rgba(196, 173, 145, 0.22));
+  }
+}
+@keyframes heroRuleReveal {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
   }
 }
 @keyframes textReveal {
@@ -1957,37 +1710,21 @@ onUnmounted(() => {
 }
 
 @media (max-width: 800px) {
-  .journey-track {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .journey-track::before {
-    left: 5px;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    height: auto;
-  }
-  .journey-step {
-    min-height: auto;
-    padding-left: 28px;
-  }
-  .journey-dot {
-    position: absolute;
-    left: 0;
-    top: 5px;
-  }
 }
 @media (max-width: 640px) {
   .hero-content-panel {
-    padding: 18px 18px 20px;
+    width: 100%;
+    padding: 20px 18px 22px;
     border-left-width: 1px;
+  }
+  .hero-copy-wrap::after {
+    margin-top: 16px;
+  }
+  .hero-copy {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
   }
   .hero-image-active {
     animation-duration: 7s;
-  }
-  .approach-row:hover {
-    padding-left: 0;
   }
   .chat-bubble {
     max-width: 92%;
@@ -2001,6 +1738,8 @@ onUnmounted(() => {
   .hero-image-active,
   .hero-copy,
   .hero-description,
+  .hero-title-text,
+  .hero-copy-wrap::after,
   .hero-scroll-line,
   .philosophy-image,
   .whatsapp-button,
@@ -2010,6 +1749,33 @@ onUnmounted(() => {
   * {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .foresight-hero {
+    min-height: 700px;
+  }
+  .hero-overlay {
+    background:
+      linear-gradient(90deg, rgba(13, 29, 25, 0.78), rgba(13, 29, 25, 0.34)),
+      linear-gradient(0deg, rgba(13, 29, 25, 0.66), transparent 72%);
+  }
+  .hero-image {
+    object-position: 56% center;
+  }
+  .hero-kicker {
+    font-size: 8px;
+    letter-spacing: 0.22em;
+    line-height: 1.7;
+  }
+  .hero-primary-cta {
+    min-height: 54px;
+    padding: 0 17px;
+    font-size: 9px;
+  }
+  .hero-secondary-cta {
+    font-size: 9px;
   }
 }
 </style>

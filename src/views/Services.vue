@@ -1,6 +1,6 @@
 <template>
   <main class="min-h-screen overflow-hidden bg-[#eaf0fb] text-[#1f2942]">
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="relative overflow-hidden bg-[#293487]">
       <div
         class="absolute -right-20 -top-24 h-80 w-80 rounded-full bg-[#008BCB]/30 blur-3xl"
@@ -10,7 +10,7 @@
       ></div>
 
       <div
-        class="relative mx-auto max-w-[1400px] px-6 pb-14 pt-24 sm:px-10 sm:pb-16 lg:px-16 lg:pb-20 lg:pt-28"
+        class="relative mx-auto max-w-[1400px] px-6 pb-14 pt-24 sm:px-10 lg:px-16 lg:py-28"
       >
         <div class="max-w-4xl">
           <div class="flex items-center gap-3">
@@ -21,308 +21,351 @@
           </div>
 
           <h1
-            class="mt-5 font-serif text-5xl font-semibold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-8xl"
+            class="mt-5 font-serif text-5xl font-semibold leading-tight text-white sm:text-6xl lg:text-8xl"
           >
             Support that begins with
             <span class="block italic text-[#FFB600]">understanding.</span>
           </h1>
 
           <p
-            class="mt-5 max-w-2xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+            class="mt-5 max-w-2xl text-base leading-8 text-white/80 sm:text-lg"
           >
-            Psychological and psychosocial support for individuals, couples and
-            families, shaped around personal needs and circumstances.
+            Psychological and psychosocial support for individuals, children,
+            couples and families, shaped around personal needs.
           </p>
 
           <div class="mt-7 flex flex-wrap gap-3">
             <button
-              type="button"
-              class="inline-flex items-center gap-3 rounded-full bg-[#FFB600] px-6 py-3.5 text-sm font-bold text-[#293487] transition hover:-translate-y-0.5 hover:bg-white"
-              @click="goToApproach"
+              @click="goToContact"
+              class="rounded-full bg-[#FFB600] px-6 py-3.5 text-sm font-bold text-[#293487] transition hover:bg-white"
             >
-              Explore our approach <span aria-hidden="true">→</span>
+              Explore the support →
             </button>
 
             <a
-              href="#services-list"
-              class="inline-flex items-center gap-3 rounded-full border border-white/40 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
+              href="#our-series"
+              class="rounded-full border border-white/40 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10"
             >
-              View all services <span aria-hidden="true">↓</span>
+              Explore concerns ↓
             </a>
           </div>
 
-          <div class="mt-10 grid max-w-2xl grid-cols-3 gap-3 sm:gap-4">
-            <div
-              class="rounded-2xl border border-white/15 bg-white/10 p-3 sm:p-4"
-            >
-              <span
-                class="block font-serif text-2xl font-semibold text-[#FFB600] sm:text-3xl"
+          <div class="mt-10 grid max-w-2xl grid-cols-3 gap-3">
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-4">
+              <span class="font-serif text-3xl font-semibold text-[#FFB600]"
                 >01</span
               >
-              <span class="mt-1 block text-xs leading-5 text-white/80"
-                >Understand</span
-              >
+              <p class="mt-1 text-xs text-white/80">Understand</p>
             </div>
-            <div
-              class="rounded-2xl border border-white/15 bg-white/10 p-3 sm:p-4"
-            >
-              <span
-                class="block font-serif text-2xl font-semibold text-[#7DE0F5] sm:text-3xl"
+
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-4">
+              <span class="font-serif text-3xl font-semibold text-[#7DE0F5]"
                 >02</span
               >
-              <span class="mt-1 block text-xs leading-5 text-white/80"
-                >Formulate</span
-              >
+              <p class="mt-1 text-xs text-white/80">Assess</p>
             </div>
-            <div
-              class="rounded-2xl border border-white/15 bg-white/10 p-3 sm:p-4"
-            >
-              <span
-                class="block font-serif text-2xl font-semibold text-[#D7D5FF] sm:text-3xl"
+
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-4">
+              <span class="font-serif text-3xl font-semibold text-[#D7D5FF]"
                 >03</span
               >
-              <span class="mt-1 block text-xs leading-5 text-white/80"
-                >Support</span
-              >
+              <p class="mt-1 text-xs text-white/80">Support</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- INTRO -->
+    <!-- INTRODUCTION -->
     <section
-      class="bg-gradient-to-br from-[#d9f4ff] via-[#e8ebff] to-[#fff0c4] px-6 py-10 sm:px-10 lg:px-16 lg:py-14"
+      class="bg-gradient-to-br from-[#d9f4ff] via-[#e8ebff] to-[#fff0c4] px-6 py-14 sm:px-10 lg:px-16"
     >
       <div
-        class="mx-auto grid max-w-[1200px] gap-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-12"
+        class="mx-auto grid max-w-[1200px] gap-8 lg:grid-cols-2 lg:items-center"
       >
         <div>
-          <div class="flex items-center gap-3">
-            <span class="h-1 w-9 rounded-full bg-[#008BCB]"></span>
-            <p class="text-xs font-bold tracking-[0.25em] text-[#008BCB]">
-              HOW WE HELP
-            </p>
-          </div>
+          <p class="text-xs font-bold tracking-[0.25em] text-[#008BCB]">
+            HOW WE HELP
+          </p>
 
           <h2
-            class="mt-4 font-serif text-3xl font-semibold leading-tight text-[#293487] sm:text-5xl"
+            class="mt-4 font-serif text-3xl font-semibold text-[#293487] sm:text-5xl"
           >
             Care that considers the
             <span class="italic text-[#008BCB]">whole context.</span>
           </h2>
         </div>
 
-        <div class="rounded-3xl border border-white/70 bg-white/65 p-5 sm:p-7">
-          <p class="text-base leading-7 text-[#46536c] sm:text-lg sm:leading-8">
+        <div class="rounded-3xl border border-white/70 bg-white/70 p-6">
+          <p class="text-base leading-8 text-[#46536c]">
             At Foresight, concerns are understood in their personal,
             behavioural, relational and social context.
           </p>
+
           <p class="mt-3 text-sm leading-7 text-[#596274]">
             Depending on individual needs, support may involve psychological
-            interventions, assessment, psychoeducation, behavioural strategies,
+            interventions, assessments, psychoeducation, behavioural strategies,
             family interventions and psychosocial care.
           </p>
         </div>
       </div>
-
-      <!-- JOURNEY CONTEXT -->
-      <div
-        v-if="selectedFeeling"
-        class="mx-auto mt-6 max-w-[1200px] overflow-hidden rounded-3xl border border-[#008BCB]/20 bg-white/80 shadow-sm"
-      >
-        <div
-          class="grid gap-5 p-5 sm:p-7 lg:grid-cols-[1fr_auto] lg:items-center"
-        >
-          <div>
-            <p class="text-[10px] font-bold tracking-[0.22em] text-[#008BCB]">
-              YOUR FORESIGHT JOURNEY
-            </p>
-            <h3
-              class="mt-2 font-serif text-2xl font-semibold text-[#293487] sm:text-3xl"
-            >
-              You said:
-              <span class="italic text-[#008BCB]">{{
-                selectedFeeling.label
-              }}</span>
-            </h3>
-            <p class="mt-2 max-w-2xl text-sm leading-6 text-[#596274]">
-              You don't need to choose the right service on your own. This is a
-              possible starting point, not a diagnosis or a substitute for
-              professional assessment.
-            </p>
-          </div>
-
-          <div class="rounded-2xl bg-[#e3f6ff] p-5 lg:min-w-[280px]">
-            <p class="text-[9px] font-bold tracking-[0.2em] text-[#008BCB]">
-              A POSSIBLE STARTING POINT
-            </p>
-            <p class="mt-2 font-serif text-2xl font-semibold text-[#293487]">
-              {{ suggestedService.title }}
-            </p>
-            <p class="mt-1 text-xs leading-5 text-[#596274]">
-              {{ suggestedService.short }}
-            </p>
-            <button
-              type="button"
-              class="mt-4 text-xs font-bold tracking-wide text-[#293487] hover:text-[#008BCB]"
-              @click="scrollToService(suggestedService.id)"
-            >
-              EXPLORE THIS SUPPORT →
-            </button>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- SERVICES -->
-    <section
-      id="services-list"
-      class="bg-[#eaf0fb] px-6 py-10 sm:px-10 lg:px-16 lg:py-14"
-    >
+    <!-- OUR SERIES: MENTAL HEALTH CONCERNS -->
+    <section id="our-series" class="bg-white px-6 py-16 sm:px-10 lg:px-16">
       <div class="mx-auto max-w-[1400px]">
-        <div
-          class="mb-7 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"
+        <p class="text-xs font-bold tracking-[0.25em] text-[#008BCB]">
+          OUR SERIES
+        </p>
+
+        <h2
+          class="mt-3 font-serif text-3xl font-semibold text-[#293487] sm:text-5xl"
         >
-          <div>
-            <p class="text-xs font-bold tracking-[0.25em] text-[#008BCB]">
-              AREAS OF SUPPORT
-            </p>
-            <h2
-              class="mt-3 font-serif text-3xl font-semibold text-[#293487] sm:text-5xl"
-            >
-              Explore your options.
-            </h2>
-          </div>
-          <p class="max-w-md text-sm leading-6 text-[#596274]">
-            Choose a service to learn how the support process may work for you.
-          </p>
-        </div>
+          Understanding Mental Health
+        </h2>
 
-        <div class="grid gap-4">
+        <p class="mt-4 max-w-3xl text-sm leading-7 text-[#596274]">
+          Explore common psychological, emotional and behavioural concerns.
+          Understanding these concerns is an important step towards seeking
+          appropriate professional support.
+        </p>
+
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <article
-            v-for="(service, index) in services"
-            :id="service.id"
-            :key="service.key"
-            class="group relative scroll-mt-24 overflow-hidden rounded-2xl border p-5 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7 lg:p-8"
-            :class="
-              selectedService === service.key
-                ? 'border-[#008BCB] bg-[#d8f4ff] ring-2 ring-[#008BCB]/30 shadow-lg'
-                : service.cardClass
-            "
+            v-for="topic in concernTopics"
+            :key="topic.title"
+            class="group overflow-hidden rounded-3xl border border-[#dfe6ef] bg-[#f8fbff] transition hover:-translate-y-1 hover:shadow-xl"
           >
-            <div
-              class="absolute -right-12 -top-12 h-40 w-40 rounded-full opacity-40 blur-2xl transition group-hover:scale-125"
-              :class="service.glowClass"
-            ></div>
+            <div class="overflow-hidden">
+              <img
+                :src="topic.image"
+                :alt="topic.title"
+                class="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
 
-            <div
-              class="relative grid gap-5 lg:grid-cols-[90px_0.85fr_1.15fr] lg:items-start lg:gap-8"
-            >
-              <div class="flex items-center gap-3 lg:block">
-                <span
-                  class="font-serif text-5xl font-semibold sm:text-6xl"
-                  :class="service.numberClass"
-                >
-                  {{ service.number }}
-                </span>
-                <span
-                  v-if="selectedService === service.key"
-                  class="rounded-full bg-[#008BCB] px-3 py-1.5 text-[9px] font-bold tracking-wider text-white lg:mt-3 lg:inline-block"
-                >
-                  SELECTED
-                </span>
-              </div>
+            <div class="p-6">
+              <span class="text-xs font-bold tracking-wider text-[#008BCB]">
+                {{ topic.category }}
+              </span>
 
-              <div>
-                <span
-                  class="inline-flex rounded-full px-3 py-1.5 text-[9px] font-bold tracking-[0.16em]"
-                  :class="service.badgeClass"
-                >
-                  {{ service.category }}
-                </span>
+              <h3 class="mt-3 font-serif text-2xl font-semibold text-[#293487]">
+                {{ topic.title }}
+              </h3>
 
-                <h3
-                  class="mt-3 font-serif text-2xl font-semibold leading-tight text-[#293487] sm:text-3xl"
-                >
-                  {{ service.title }}
-                </h3>
-              </div>
-
-              <div>
-                <p
-                  class="text-sm font-medium leading-7 text-[#39465e] sm:text-base"
-                >
-                  {{ service.description }}
-                </p>
-                <p class="mt-2 text-sm leading-6 text-[#596274]">
-                  {{ service.details }}
-                </p>
-
-                <div
-                  v-if="service.tags?.length"
-                  class="mt-4 flex flex-wrap gap-2"
-                >
-                  <span
-                    v-for="tag in service.tags"
-                    :key="tag"
-                    class="rounded-full border border-[#293487]/10 bg-white/80 px-3 py-1.5 text-xs font-medium text-[#293487]"
-                  >
-                    {{ tag }}
-                  </span>
-                </div>
-
-                <button
-                  type="button"
-                  class="mt-5 inline-flex items-center gap-2 rounded-full bg-[#293487] px-5 py-3 text-xs font-bold tracking-wide text-white transition hover:bg-[#008BCB]"
-                  @click="chooseService(service)"
-                >
-                  {{
-                    selectedService === service.key
-                      ? "VIEW YOUR APPROACH"
-                      : "EXPLORE THIS SUPPORT"
-                  }}
-                  <span aria-hidden="true">→</span>
-                </button>
-              </div>
+              <p class="mt-3 text-sm leading-7 text-[#596274]">
+                {{ topic.description }}
+              </p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- APPROACH PREVIEW -->
+    <!-- TYPES OF THERAPIES -->
+    <section class="bg-[#eaf0fb] px-6 py-16 sm:px-10 lg:px-16">
+      <div class="mx-auto max-w-[1400px]">
+        <p class="text-xs font-bold tracking-[0.25em] text-[#008BCB]">
+          PSYCHOLOGICAL INTERVENTIONS
+        </p>
+
+        <h2
+          class="mt-3 font-serif text-3xl font-semibold text-[#293487] sm:text-5xl"
+        >
+          Types of Therapies
+        </h2>
+
+        <p class="mt-4 max-w-3xl text-sm leading-7 text-[#596274]">
+          Different therapeutic approaches can help individuals understand their
+          thoughts, emotions and behaviours. The approach is selected according
+          to individual needs and professional assessment.
+        </p>
+
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article
+            v-for="therapy in therapyTopics"
+            :key="therapy.title"
+            class="group overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <div class="overflow-hidden">
+              <img
+                :src="therapy.image"
+                :alt="therapy.title"
+                class="h-48 w-full object-cover transition duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold text-[#293487]">
+                {{ therapy.title }}
+              </h3>
+
+              <p class="mt-3 text-sm leading-7 text-[#596274]">
+                {{ therapy.description }}
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHILD PSYCHOLOGY AND SCHOOL PROBLEMS -->
     <section
-      class="bg-gradient-to-br from-[#fff0c4] via-[#e2f5ff] to-[#e7e9ff] px-6 py-10 sm:px-10 lg:px-16 lg:py-14"
+      class="bg-gradient-to-br from-[#d9f4ff] via-[#e8ebff] to-[#fff0c4] px-6 py-16 sm:px-10 lg:px-16"
+    >
+      <div class="mx-auto max-w-[1400px]">
+        <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p class="text-xs font-bold tracking-[0.25em] text-[#008BCB]">
+              CHILD & ADOLESCENT PSYCHOLOGY
+            </p>
+
+            <h2
+              class="mt-3 font-serif text-3xl font-semibold text-[#293487] sm:text-5xl"
+            >
+              Supporting Children at Every Stage
+            </h2>
+
+            <p class="mt-5 text-sm leading-8 text-[#596274]">
+              Children and adolescents may experience emotional, behavioural,
+              academic and developmental difficulties. Early identification and
+              appropriate assessment can help understand their individual needs.
+            </p>
+          </div>
+
+          <div class="overflow-hidden rounded-3xl shadow-lg">
+            <img
+              src="https://static.wixstatic.com/media/5de58e_a0634e41f79a4e6aab377dc2b89fb4a3~mv2.jpg/v1/fill/w_490%2Ch_653%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/5de58e_a0634e41f79a4e6aab377dc2b89fb4a3~mv2.jpg"
+              alt="Child learning and development"
+              class="h-72 w-full object-cover sm:h-96"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article
+            v-for="item in childSupportTopics"
+            :key="item.title"
+            class="rounded-3xl border border-white bg-white/85 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div class="overflow-hidden rounded-2xl">
+              <img
+                :src="item.image"
+                :alt="item.title"
+                class="h-44 w-full object-cover transition duration-500 hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+
+            <h3 class="mt-4 font-serif text-xl font-semibold text-[#293487]">
+              {{ item.title }}
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-[#596274]">
+              {{ item.description }}
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PSYCHOLOGICAL ASSESSMENTS -->
+    <section class="bg-white px-6 py-16 sm:px-10 lg:px-16">
+      <div class="mx-auto max-w-[1200px]">
+        <p class="text-xs font-bold tracking-[0.25em] text-[#008BCB]">
+          PSYCHOLOGICAL TESTING
+        </p>
+
+        <h2
+          class="mt-3 font-serif text-3xl font-semibold text-[#293487] sm:text-5xl"
+        >
+          Psychological Assessments
+        </h2>
+
+        <p class="mt-4 max-w-3xl text-sm leading-7 text-[#596274]">
+          Psychological assessments help understand an individual's cognitive
+          abilities, learning profile, emotional functioning and behavioural
+          patterns.
+        </p>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-2">
+          <div class="overflow-hidden rounded-3xl bg-[#eaf0fb]">
+            <img
+              src="https://www.whis.edu.in/smc/image-basket/Remedial-Teaching--The-Recharge-Center-1724132083.jpg"
+              alt="Psychological assessment and testing"
+              class="h-64 w-full object-cover"
+              loading="lazy"
+            />
+
+            <div class="p-6">
+              <h3 class="font-serif text-2xl font-semibold text-[#293487]">
+                IQ & Cognitive Testing
+              </h3>
+
+              <p class="mt-3 text-sm leading-7 text-[#596274]">
+                Assessment of intellectual abilities and cognitive functioning
+                using appropriate standardised assessment tools.
+              </p>
+            </div>
+          </div>
+
+          <div class="overflow-hidden rounded-3xl bg-[#eaf0fb]">
+            <img
+              src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg"
+              alt="Child learning assessment"
+              class="h-64 w-full object-cover"
+              loading="lazy"
+            />
+
+            <div class="p-6">
+              <h3 class="font-serif text-2xl font-semibold text-[#293487]">
+                Learning & Developmental Assessment
+              </h3>
+
+              <p class="mt-3 text-sm leading-7 text-[#596274]">
+                Understanding learning difficulties, attention, concentration
+                and developmental needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR APPROACH -->
+    <section
+      class="bg-gradient-to-br from-[#fff0c4] via-[#e2f5ff] to-[#e7e9ff] px-6 py-16 sm:px-10 lg:px-16"
     >
       <div
-        class="mx-auto max-w-[1200px] overflow-hidden rounded-3xl bg-[#293487] p-6 sm:p-9 lg:p-12"
+        class="mx-auto max-w-[1200px] rounded-3xl bg-[#293487] p-6 sm:p-10 lg:p-12"
       >
-        <div
-          class="grid items-center gap-7 lg:grid-cols-[0.85fr_1.15fr] lg:gap-10"
-        >
+        <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>
             <p class="text-xs font-bold tracking-[0.28em] text-[#FFB600]">
               OUR APPROACH
             </p>
+
             <h2
-              class="mt-3 font-serif text-3xl font-semibold leading-tight text-white sm:text-5xl"
+              class="mt-3 font-serif text-3xl font-semibold text-white sm:text-5xl"
             >
               Understand.
               <span class="italic text-[#FFB600]">Formulate.</span>
               Intervene. Grow.
             </h2>
+
             <p class="mt-4 text-sm leading-7 text-white/75">
               Discover how we move from understanding a concern to planning
               thoughtful, individualised support.
             </p>
 
             <button
-              type="button"
-              class="mt-6 inline-flex items-center gap-3 rounded-full bg-[#FFB600] px-6 py-3.5 text-sm font-bold text-[#293487] transition hover:-translate-y-0.5 hover:bg-white"
-              @click="goToApproach"
+              @click="goToContact"
+              class="mt-6 rounded-full bg-[#FFB600] px-6 py-3.5 text-sm font-bold text-[#293487] transition hover:bg-white"
             >
-              Explore our approach <span aria-hidden="true">→</span>
+              Explore the support →
             </button>
           </div>
 
@@ -330,8 +373,7 @@
             <div
               v-for="(stage, index) in approachStages"
               :key="stage.title"
-              class="rounded-2xl border border-white/10 p-5"
-              :class="['bg-white/10', index === 1 ? 'sm:translate-y-4' : '']"
+              class="rounded-2xl border border-white/10 bg-white/10 p-5"
             >
               <span
                 class="font-serif text-3xl font-semibold"
@@ -339,10 +381,12 @@
               >
                 0{{ index + 1 }}
               </span>
-              <p class="mt-2 text-base font-semibold text-white">
+
+              <h3 class="mt-2 text-base font-semibold text-white">
                 {{ stage.title }}
-              </p>
-              <p class="mt-1 text-xs leading-5 text-white/65">
+              </h3>
+
+              <p class="mt-2 text-xs leading-6 text-white/65">
                 {{ stage.description }}
               </p>
             </div>
@@ -352,38 +396,32 @@
     </section>
 
     <!-- FINAL CTA -->
-    <section class="bg-[#dceeff] px-6 py-10 sm:px-10 lg:px-16 lg:py-14">
+    <section class="bg-[#dceeff] px-6 py-16 sm:px-10 lg:px-16">
       <div
-        class="mx-auto max-w-[1000px] rounded-3xl border border-white/80 bg-white/55 px-5 py-8 text-center sm:px-10 sm:py-10"
+        class="mx-auto max-w-[1000px] rounded-3xl border border-white bg-white/70 px-6 py-10 text-center sm:px-10"
       >
-        <div class="flex items-center justify-center gap-3">
-          <span class="h-1 w-8 rounded-full bg-[#008BCB]"></span>
-          <p class="text-xs font-bold tracking-[0.25em] text-[#293487]">
-            TAKE THE FIRST STEP
-          </p>
-          <span class="h-1 w-8 rounded-full bg-[#FFB600]"></span>
-        </div>
+        <p class="text-xs font-bold tracking-[0.25em] text-[#293487]">
+          TAKE THE FIRST STEP
+        </p>
 
         <h2
-          class="mt-4 font-serif text-3xl font-semibold leading-tight text-[#293487] sm:text-5xl"
+          class="mt-4 font-serif text-3xl font-semibold text-[#293487] sm:text-5xl"
         >
           Find the right space for
           <span class="italic text-[#008BCB]">your concerns.</span>
         </h2>
 
-        <p
-          class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#596274] sm:text-base"
-        >
+        <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#596274]">
           Tell us what you're experiencing and our team can help you understand
           the available support.
         </p>
 
         <RouterLink
           to="/contact"
-          class="mt-6 inline-flex items-center gap-3 rounded-full bg-[#293487] px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#008BCB]"
           @click="goToContact"
+          class="mt-7 inline-flex rounded-full bg-[#293487] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#008BCB]"
         >
-          Book an Appointment <span aria-hidden="true">→</span>
+          Book an Appointment →
         </RouterLink>
       </div>
     </section>
@@ -391,63 +429,48 @@
 </template>
 
 <script setup>
-import { computed, onMounted } from "vue";
+import { onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useForesightJourney } from "../composables/useForesightJourney.js";
 
 const router = useRouter();
+
 const { state, setService, setStage } = useForesightJourney();
 
 onMounted(() => {
   setStage("explore");
 });
 
-const feelingLabels = {
-  low: { label: "I feel low", service: "individual" },
-  anxious: { label: "I feel anxious", service: "individual" },
-  exhausted: { label: "I'm exhausted", service: "individual" },
-  overwhelmed: { label: "I'm overwhelmed", service: "individual" },
-  focus: { label: "I can't focus", service: "individual" },
-  unsure: { label: "Something feels off", service: "individual" },
-};
+// EXISTING SERVICES
 
 const services = [
   {
     key: "individual",
     id: "individual-support",
-    number: "01",
     category: "INDIVIDUAL SUPPORT",
     title: "Individual Counselling",
     short: "A space to explore emotional, behavioural and personal concerns.",
     description:
       "Professional support for emotional, behavioural and personal concerns.",
     details:
-      "Interventions may include CBT-informed techniques, psychoeducation, emotional regulation, behavioural strategies, problem-solving and coping-skills training, depending on individual needs.",
-    badgeClass: "bg-[#293487] text-white",
+      "Interventions may include CBT-informed techniques, psychoeducation, emotional regulation, behavioural strategies, problem-solving and coping-skills training.",
     cardClass: "border-[#c9d4fa] bg-gradient-to-r from-white to-[#e8ebff]",
-    numberClass: "text-[#293487]/35",
-    glowClass: "bg-[#7b83ff]",
   },
   {
     key: "family",
     id: "family-support",
-    number: "02",
     category: "FAMILY SUPPORT",
     title: "Family Counselling",
     short: "Support for communication, parenting and family concerns.",
     description:
       "Understanding relationships, communication and family dynamics.",
     details:
-      "We work with families experiencing communication difficulties, parenting concerns, interpersonal conflicts, behavioural concerns and adjustment difficulties.",
-    badgeClass: "bg-[#008BCB] text-white",
+      "Support for communication difficulties, parenting concerns, interpersonal conflicts and adjustment difficulties.",
     cardClass: "border-[#b9e9f7] bg-gradient-to-r from-white to-[#ddf7ff]",
-    numberClass: "text-[#008BCB]/45",
-    glowClass: "bg-[#4ed8f4]",
   },
   {
     key: "relationship",
     id: "relationship-support",
-    number: "03",
     category: "RELATIONSHIPS",
     title: "Couple & Relationship Counselling",
     short: "Support for communication and relationship patterns.",
@@ -455,31 +478,23 @@ const services = [
       "A structured space to understand relationship patterns and develop healthier communication.",
     details:
       "Sessions may focus on communication, conflict resolution, emotional connection, expectations and relationship adjustment.",
-    badgeClass: "bg-[#FFB600] text-[#293487]",
     cardClass: "border-[#f3d98d] bg-gradient-to-r from-white to-[#fff4d4]",
-    numberClass: "text-[#d49b00]/55",
-    glowClass: "bg-[#ffdc6c]",
   },
   {
     key: "young-people",
     id: "young-people-support",
-    number: "04",
     category: "YOUNG PEOPLE",
     title: "Child & Adolescent Support",
     short: "Support that considers young people and their context.",
     description:
-      "Children and adolescents may express emotional difficulties through changes in behaviour, academics, relationships or social functioning.",
+      "Children and adolescents may express emotional difficulties through changes in behaviour, academics and relationships.",
     details:
       "Our approach considers the child, family and environmental context while developing appropriate psychological and psychosocial interventions.",
-    badgeClass: "bg-[#6754b8] text-white",
     cardClass: "border-[#d8ccff] bg-gradient-to-r from-white to-[#eee9ff]",
-    numberClass: "text-[#6754b8]/40",
-    glowClass: "bg-[#b6a1ff]",
   },
   {
     key: "assessment",
     id: "assessment-support",
-    number: "05",
     category: "ASSESSMENT",
     title: "Psychological Assessment",
     short: "Assessment to understand psychological functioning.",
@@ -487,15 +502,11 @@ const services = [
       "Professional psychological assessment can help develop a clearer understanding of cognitive, emotional, behavioural and personality-related functioning.",
     details:
       "Assessments are selected according to the individual's clinical requirements.",
-    badgeClass: "bg-[#008BCB] text-white",
     cardClass: "border-[#b9e9f7] bg-gradient-to-r from-white to-[#e1f8f8]",
-    numberClass: "text-[#008BCB]/40",
-    glowClass: "bg-[#7de0f5]",
   },
   {
     key: "recovery",
     id: "recovery-support",
-    number: "06",
     category: "RECOVERY SUPPORT",
     title: "De-addiction & Recovery Support",
     short: "Psychological and psychosocial support around recovery.",
@@ -511,12 +522,138 @@ const services = [
       "Family Interventions",
       "Psychoeducation",
     ],
-    badgeClass: "bg-[#FFB600] text-[#293487]",
     cardClass: "border-[#f3d98d] bg-gradient-to-r from-white to-[#fff0d7]",
-    numberClass: "text-[#d49b00]/50",
-    glowClass: "bg-[#ffcf70]",
   },
 ];
+
+// MENTAL HEALTH CONCERNS
+
+const concernTopics = [
+  {
+    category: "EMOTIONAL WELLBEING",
+    title: "Anxiety & Panic",
+    description:
+      "Understanding excessive worry, fear, panic symptoms and developing healthy coping strategies.",
+    image:
+      "https://saanthwana.com/saanthwana-counselling-healing-center-hyderabad/saanthwana-counselling-healing-center-hyderabad.png",
+  },
+  {
+    category: "THOUGHTS & BEHAVIOURS",
+    title: "Obsessive Compulsive Disorder (OCD)",
+    description:
+      "Understanding intrusive thoughts, repetitive behaviours and available psychological support.",
+    image:
+      "https://static.mywebsites360.com/fbb117e45e7a46cba2bfc96d8a0f2b89/i/d7e68439de02424080068ee464190e61/1/4SoifmQp45JMgBnHjfgmz/Anxiety%20Center%20Checking%20OCD.png",
+  },
+  {
+    category: "EMOTIONAL REGULATION",
+    title: "Anger Management",
+    description:
+      "Recognising anger triggers, managing emotions and developing healthier responses.",
+    image:
+      "https://cdn.pixabay.com/photo/2014/02/25/10/59/angry-man-274175_1280.jpg",
+  },
+  {
+    category: "MOOD & EMOTIONS",
+    title: "Emotional Difficulties",
+    description:
+      "Support for low mood, stress, self-esteem and emotional adjustment.",
+    image:
+      "https://images.pexels.com/photos/1930523/pexels-photo-1930523.jpeg?cs=srgb&dl=pexels-ana-bregantin-892791-1930523.jpg&fm=jpg",
+  },
+  {
+    category: "BEHAVIOURAL HEALTH",
+    title: "Addiction & Related Problems",
+    description:
+      "Understanding addictive behaviours, triggers, motivation and recovery strategies.",
+    image: "https://asrcharitabletrust.org/6.6.png",
+  },
+  {
+    category: "BEHAVIOURAL WELLBEING",
+    title: "Behavioural Problems",
+    description:
+      "Understanding behavioural changes, interpersonal difficulties and adjustment concerns.",
+    image:
+      "https://framerusercontent.com/images/6aPrkDZPRV4hHogFhZDa8ENBqI.png?height=1024&width=1024",
+  },
+];
+
+// TYPES OF THERAPIES
+
+const therapyTopics = [
+  {
+    title: "Cognitive Behavioural Therapy (CBT)",
+    description:
+      "Identifying unhelpful thoughts and behaviours and developing healthier thinking patterns.",
+    image:
+      "https://successunlocking.com/uploads/home/1776776291_07a8b9a2bb8092c7e292.png",
+  },
+  {
+    title: "Mindfulness Therapy",
+    description:
+      "Developing present-moment awareness and learning to manage thoughts and emotions.",
+    image: "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg",
+  },
+  {
+    title: "Relaxation Exercises",
+    description:
+      "Breathing exercises, grounding techniques and muscle relaxation for stress management.",
+    image: "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg",
+  },
+  {
+    title: "Counselling & Psychotherapy",
+    description:
+      "A supportive environment to explore concerns and develop effective coping skills.",
+    image:
+      "https://ddurga.dpdns.org/images/psychologist-chennai-consultation.jpg",
+  },
+];
+
+// CHILD AND SCHOOL-RELATED PROBLEMS
+
+const childSupportTopics = [
+  {
+    image:
+      "https://assets.zyrosite.com/cdn-cgi/image/format%3Dauto%2Cw%3D768%2Ch%3D479%2Cfit%3Dcrop/MVNkISAPXnFqY8Ld/an_image_of_an_indian_child_age_7_sitting_at_a_des_c4da81adc8-Q9zriCVPNAF3Bh2d.jpeg",
+    title: "IQ Tests & Cognitive Assessment",
+    description:
+      "Assessment of intellectual abilities and cognitive functioning using appropriate standardised tools.",
+  },
+  {
+    image:
+      "https://static.wixstatic.com/media/5de58e_4b2fcf3e0daf4f38a1e80ddbbe5ae081~mv2.jpg/v1/fill/w_640%2Ch_708%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/5de58e_4b2fcf3e0daf4f38a1e80ddbbe5ae081~mv2.jpg",
+    title: "Learning Difficulties",
+    description:
+      "Support for difficulties related to reading, writing, mathematics and learning.",
+  },
+  {
+    image:
+      "https://framerusercontent.com/images/Y5qY8bDY12p3ABiuBGUUxUrllkk.jpeg?height=1024&width=1024",
+    title: "Attention & Concentration",
+    description:
+      "Understanding attention, focus and factors affecting classroom participation.",
+  },
+  {
+    image: "https://globalgiving.org/pfil/16364/ph_16364_57492.jpg",
+    title: "School-Related Problems",
+    description:
+      "Support for academic stress, peer relationships and school adjustment.",
+  },
+  {
+    image: "https://isharastogi.com/hero-image.png",
+    title: "Emotional & Behavioural Problems",
+    description:
+      "Understanding emotional outbursts, behavioural changes and coping difficulties.",
+  },
+  {
+    image: "https://www.creativemindind.com/imgs/Parent%20Counseling.jpg",
+    title: "Parent & Family Guidance",
+    description:
+      "Helping parents develop supportive routines and healthy communication with children.",
+  },
+];
+
+// OUR APPROACH
 
 const approachStages = [
   {
@@ -537,48 +674,20 @@ const approachStages = [
   },
 ];
 
-const selectedFeeling = computed(() => {
-  const feeling = state.feeling;
-  return feeling ? feelingLabels[feeling] || null : null;
-});
-
-const suggestedService = computed(() => {
-  const key = selectedFeeling.value?.service || "individual";
-  return services.find((service) => service.key === key) || services[0];
-});
-
-const selectedService = computed(() => state.service || "");
-
-const scrollToService = (serviceId) => {
-  document.getElementById(serviceId)?.scrollIntoView({
-    behavior: "smooth",
-    block: "center",
-  });
-};
+// NAVIGATION
 
 const chooseService = (service) => {
   setService(service.key);
   setStage("connect");
 
   router.push({
-    path: "/approach",
+    path: "/contact",
     query: { service: service.key },
-  });
-};
-
-const goToApproach = () => {
-  const serviceKey = selectedService.value || suggestedService.value.key;
-
-  setService(serviceKey);
-  setStage("connect");
-
-  router.push({
-    path: "/approach",
-    query: { service: serviceKey },
   });
 };
 
 const goToContact = () => {
   setStage("connect");
+  router.push("/contact");
 };
 </script>

@@ -420,6 +420,65 @@
         </div>
       </section>
 
+      <!-- MEMBER 05 -->
+      <article
+        class="mt-6 overflow-hidden rounded-[2rem] bg-white shadow-[0_20px_60px_rgba(41,52,135,0.07)]"
+      >
+        <div class="grid lg:grid-cols-[0.42fr_0.58fr]">
+          <div
+            class="relative flex min-h-[300px] items-end overflow-hidden bg-[#008BCB] p-8 sm:p-10 lg:min-h-[430px] lg:p-12"
+          >
+            <div
+              class="absolute -right-20 -top-20 h-56 w-56 rounded-full border border-white/10"
+            ></div>
+            <div
+              class="absolute bottom-8 right-8 text-7xl font-serif text-white/5"
+            >
+              05
+            </div>
+            <div class="relative">
+              <span class="text-xs font-bold tracking-[0.25em] text-white/80">
+                CLINICAL PSYCHOLOGY
+              </span>
+              <p
+                class="mt-5 font-serif text-3xl font-semibold text-white sm:text-4xl"
+              >
+                Psychological
+                <span class="italic text-[#FFB600]"> Care </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="p-8 sm:p-10 lg:p-12">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-full bg-[#008BCB] text-sm font-bold text-white"
+            >
+              05
+            </div>
+            <h2
+              class="mt-7 font-serif text-3xl font-semibold text-[#293487] sm:text-4xl"
+            >
+              Dr. Shilpa Pannal
+            </h2>
+            <p
+              class="mt-3 text-sm font-semibold tracking-[0.12em] text-[#008BCB]"
+            >
+              CLINICAL PSYCHOLOGIST
+            </p>
+            <span
+              class="mt-4 inline-flex rounded-full bg-[#f3f7fa] px-4 py-2 text-xs font-semibold text-[#293487]"
+            >
+              15+ Years of Experience
+            </span>
+            <div class="mt-7 h-px w-16 bg-[#FFB600]"></div>
+            <p class="mt-6 text-base leading-8 text-[#596274]">
+              Clinical psychology experience in psychological assessment,
+              counselling and therapeutic support.
+            </p>
+          </div>
+        </div>
+      </article>
+
       <!-- =========================================================
            TEAM PERSPECTIVE
       ========================================================== -->

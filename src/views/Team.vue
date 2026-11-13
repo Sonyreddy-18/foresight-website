@@ -1,14 +1,11 @@
 <template>
   <div class="min-h-screen bg-white text-[#1f2942]">
     <main class="overflow-hidden">
-      <!-- =========================================================
-           HERO
-      ========================================================== -->
+      <!-- HERO -->
       <section class="relative overflow-hidden bg-[#293487] pt-24">
         <div
           class="absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-[#008BCB]/20 blur-3xl"
         ></div>
-
         <div
           class="absolute -bottom-48 -left-32 h-[420px] w-[420px] rounded-full bg-[#FFB600]/10 blur-3xl"
         ></div>
@@ -19,7 +16,6 @@
           <div class="max-w-4xl">
             <div class="flex items-center gap-4">
               <span class="h-px w-12 bg-[#FFB600]"></span>
-
               <p class="text-xs font-bold tracking-[0.3em] text-[#FFB600]">
                 OUR PROFESSIONAL TEAM
               </p>
@@ -45,9 +41,7 @@
         </div>
       </section>
 
-      <!-- =========================================================
-           JOURNEY CONTEXT
-      ========================================================== -->
+      <!-- JOURNEY CONTEXT -->
       <section
         v-if="hasJourneyContext"
         class="border-b border-[#293487]/10 bg-white px-6 py-8 sm:px-10 lg:px-16"
@@ -62,7 +56,6 @@
               <div>
                 <div class="flex items-center gap-3">
                   <span class="h-2 w-2 rounded-full bg-[#FFB600]"></span>
-
                   <p
                     class="text-[10px] font-bold tracking-[0.25em] text-[#FFB600]"
                   >
@@ -98,10 +91,8 @@
                 <p class="text-[9px] font-bold tracking-[0.22em] text-white/40">
                   YOU ARE HERE
                 </p>
-
                 <div class="mt-2 flex items-center gap-3">
                   <span class="h-2 w-2 rounded-full bg-[#008BCB]"></span>
-
                   <span class="text-sm font-semibold tracking-wide text-white">
                     Meet the team
                   </span>
@@ -112,9 +103,7 @@
         </div>
       </section>
 
-      <!-- =========================================================
-           INTRO
-      ========================================================== -->
+      <!-- INTRO -->
       <section class="px-6 py-20 sm:px-10 lg:px-16 lg:py-24">
         <div
           class="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20"
@@ -122,7 +111,6 @@
           <div>
             <div class="flex items-center gap-4">
               <span class="h-px w-10 bg-[#008BCB]"></span>
-
               <p class="text-xs font-bold tracking-[0.28em] text-[#008BCB]">
                 MULTIDISCIPLINARY CARE
               </p>
@@ -141,7 +129,6 @@
               Foresight brings together professionals with different areas of
               clinical and psychosocial expertise.
             </p>
-
             <p class="mt-6 text-base leading-8 text-[#596274]">
               This multidisciplinary perspective allows concerns to be
               understood across psychological, psychiatric, behavioural,
@@ -151,12 +138,10 @@
         </div>
       </section>
 
-      <!-- =========================================================
-           TEAM
-      ========================================================== -->
+      <!-- TEAM -->
       <section class="bg-[#f3f7fa] px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
         <div class="mx-auto max-w-[1200px]">
-          <!-- MEMBER 01 -->
+          <!-- MEMBER 01: DR. MAHENDRA SHEKHAR -->
           <article
             class="overflow-hidden rounded-[2rem] bg-white shadow-[0_20px_60px_rgba(41,52,135,0.07)]"
           >
@@ -167,7 +152,6 @@
                 <div
                   class="absolute -right-20 -top-20 h-56 w-56 rounded-full border border-white/10"
                 ></div>
-
                 <div
                   class="absolute bottom-8 right-8 text-7xl font-serif text-white/5"
                 >
@@ -180,12 +164,11 @@
                   >
                     PSYCHIATRY
                   </span>
-
                   <p
                     class="mt-5 font-serif text-3xl font-semibold text-white sm:text-4xl"
                   >
                     Psychiatric
-                    <span class="italic text-[#FFB600]"> Care </span>
+                    <span class="italic text-[#FFB600]">Care</span>
                   </p>
                 </div>
               </div>
@@ -218,7 +201,7 @@
             </div>
           </article>
 
-          <!-- MEMBER 02 -->
+          <!-- MEMBER 02: DR. SHILPA PANNAL -->
           <article
             class="mt-6 overflow-hidden rounded-[2rem] bg-white shadow-[0_20px_60px_rgba(41,52,135,0.07)]"
           >
@@ -229,7 +212,6 @@
                 <div
                   class="absolute -right-20 -top-20 h-56 w-56 rounded-full border border-white/10"
                 ></div>
-
                 <div
                   class="absolute bottom-8 right-8 text-7xl font-serif text-white/5"
                 >
@@ -242,12 +224,11 @@
                   >
                     CLINICAL PSYCHOLOGY
                   </span>
-
                   <p
                     class="mt-5 font-serif text-3xl font-semibold text-white sm:text-4xl"
                   >
                     Psychological
-                    <span class="italic text-[#FFB600]"> Care </span>
+                    <span class="italic text-[#FFB600]">Care</span>
                   </p>
                 </div>
               </div>
@@ -257,6 +238,73 @@
                   class="flex h-12 w-12 items-center justify-center rounded-full bg-[#008BCB] text-sm font-bold text-white"
                 >
                   02
+                </div>
+
+                <h2
+                  class="mt-7 font-serif text-3xl font-semibold text-[#293487] sm:text-4xl"
+                >
+                  Dr. Shilpa Pannal
+                </h2>
+
+                <p
+                  class="mt-3 text-sm font-semibold tracking-[0.12em] text-[#008BCB]"
+                >
+                  CLINICAL PSYCHOLOGIST
+                </p>
+
+                <span
+                  class="mt-4 inline-flex rounded-full bg-[#f3f7fa] px-4 py-2 text-xs font-semibold text-[#293487]"
+                >
+                  15+ Years of Experience
+                </span>
+
+                <div class="mt-7 h-px w-16 bg-[#FFB600]"></div>
+
+                <p class="mt-6 text-base leading-8 text-[#596274]">
+                  Clinical psychology experience in psychological assessment,
+                  counselling and therapeutic support.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- MEMBER 03: DR. MAHESH SANGA -->
+          <article
+            class="mt-6 overflow-hidden rounded-[2rem] bg-white shadow-[0_20px_60px_rgba(41,52,135,0.07)]"
+          >
+            <div class="grid lg:grid-cols-[0.42fr_0.58fr]">
+              <div
+                class="relative flex min-h-[300px] items-end overflow-hidden bg-[#FFB600] p-8 sm:p-10 lg:min-h-[430px] lg:p-12"
+              >
+                <div
+                  class="absolute -right-20 -top-20 h-56 w-56 rounded-full border border-[#293487]/10"
+                ></div>
+                <div
+                  class="absolute bottom-8 right-8 text-7xl font-serif text-[#293487]/10"
+                >
+                  03
+                </div>
+
+                <div class="relative">
+                  <span
+                    class="text-xs font-bold tracking-[0.25em] text-[#293487]/70"
+                  >
+                    CLINICAL PSYCHOLOGY
+                  </span>
+                  <p
+                    class="mt-5 font-serif text-3xl font-semibold text-[#293487] sm:text-4xl"
+                  >
+                    Psychological
+                    <span class="italic text-[#008BCB]">Care</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-8 sm:p-10 lg:p-12">
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FFB600] text-sm font-bold text-[#293487]"
+                >
+                  03
                 </div>
 
                 <h2
@@ -286,70 +334,7 @@
             </div>
           </article>
 
-          <!-- MEMBER 03 -->
-          <article
-            class="mt-6 overflow-hidden rounded-[2rem] bg-white shadow-[0_20px_60px_rgba(41,52,135,0.07)]"
-          >
-            <div class="grid lg:grid-cols-[0.42fr_0.58fr]">
-              <div
-                class="relative flex min-h-[300px] items-end overflow-hidden bg-[#FFB600] p-8 sm:p-10 lg:min-h-[430px] lg:p-12"
-              >
-                <div
-                  class="absolute -right-20 -top-20 h-56 w-56 rounded-full border border-[#293487]/10"
-                ></div>
-
-                <div
-                  class="absolute bottom-8 right-8 text-7xl font-serif text-[#293487]/10"
-                >
-                  03
-                </div>
-
-                <div class="relative">
-                  <span
-                    class="text-xs font-bold tracking-[0.25em] text-[#293487]/70"
-                  >
-                    ADVANCED CLINICAL TRAINING
-                  </span>
-
-                  <p
-                    class="mt-5 font-serif text-3xl font-semibold text-[#293487] sm:text-4xl"
-                  >
-                    Psychological &
-                    <span class="italic text-[#008BCB]"> Psychosocial </span>
-                  </p>
-                </div>
-              </div>
-
-              <div class="p-8 sm:p-10 lg:p-12">
-                <div
-                  class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FFB600] text-sm font-bold text-[#293487]"
-                >
-                  03
-                </div>
-
-                <h2
-                  class="mt-7 font-serif text-3xl font-semibold text-[#293487] sm:text-4xl"
-                >
-                  Mr. Gurrapu Rakesh
-                </h2>
-
-                <p
-                  class="mt-3 text-sm font-semibold tracking-[0.1em] text-[#008BCB]"
-                >
-                  M.PHIL. (NIMHANS) | PH.D.
-                </p>
-
-                <div class="mt-7 h-px w-16 bg-[#FFB600]"></div>
-
-                <p class="mt-6 text-base leading-8 text-[#596274]">
-                  Psychological and psychosocial interventions with advanced
-                  clinical training.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- MEMBER 04 -->
+          <!-- MEMBER 04: MR. GURRAPU RAKESH -->
           <article
             class="mt-6 overflow-hidden rounded-[2rem] bg-white shadow-[0_20px_60px_rgba(41,52,135,0.07)]"
           >
@@ -360,7 +345,6 @@
                 <div
                   class="absolute -right-20 -top-20 h-56 w-56 rounded-full border border-white/10"
                 ></div>
-
                 <div
                   class="absolute bottom-8 right-8 text-7xl font-serif text-white/5"
                 >
@@ -371,14 +355,13 @@
                   <span
                     class="text-xs font-bold tracking-[0.25em] text-[#FFB600]"
                   >
-                    PSYCHIATRIC SOCIAL WORK
+                    ADVANCED CLINICAL TRAINING
                   </span>
-
                   <p
                     class="mt-5 font-serif text-3xl font-semibold text-white sm:text-4xl"
                   >
-                    Psychosocial
-                    <span class="italic text-[#FFB600]"> Support </span>
+                    Psychological &
+                    <span class="italic text-[#FFB600]">Psychosocial</span>
                   </p>
                 </div>
               </div>
@@ -393,13 +376,74 @@
                 <h2
                   class="mt-7 font-serif text-3xl font-semibold text-[#293487] sm:text-4xl"
                 >
+                  Mr. Gurrapu Rakesh
+                </h2>
+
+                <p
+                  class="mt-3 text-sm font-semibold tracking-[0.1em] text-[#008BCB]"
+                >
+                  M.PHIL. (NIMHANS) | (PH.D.)
+                </p>
+
+                <div class="mt-7 h-px w-16 bg-[#FFB600]"></div>
+
+                <p class="mt-6 text-base leading-8 text-[#596274]">
+                  Psychological and psychosocial interventions with advanced
+                  clinical training.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- MEMBER 05: MR. SHIVA KUMAR MEDHARI -->
+          <article
+            class="mt-6 overflow-hidden rounded-[2rem] bg-white shadow-[0_20px_60px_rgba(41,52,135,0.07)]"
+          >
+            <div class="grid lg:grid-cols-[0.42fr_0.58fr]">
+              <div
+                class="relative flex min-h-[300px] items-end overflow-hidden bg-[#008BCB] p-8 sm:p-10 lg:min-h-[430px] lg:p-12"
+              >
+                <div
+                  class="absolute -right-20 -top-20 h-56 w-56 rounded-full border border-white/10"
+                ></div>
+                <div
+                  class="absolute bottom-8 right-8 text-7xl font-serif text-white/5"
+                >
+                  05
+                </div>
+
+                <div class="relative">
+                  <span
+                    class="text-xs font-bold tracking-[0.25em] text-white/80"
+                  >
+                    PSYCHIATRIC SOCIAL WORK
+                  </span>
+                  <p
+                    class="mt-5 font-serif text-3xl font-semibold text-white sm:text-4xl"
+                  >
+                    Psychosocial
+                    <span class="italic text-[#FFB600]">Support</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-8 sm:p-10 lg:p-12">
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-[#008BCB] text-sm font-bold text-white"
+                >
+                  05
+                </div>
+
+                <h2
+                  class="mt-7 font-serif text-3xl font-semibold text-[#293487] sm:text-4xl"
+                >
                   Mr. Shiva Kumar Medhari
                 </h2>
 
                 <p
                   class="mt-3 text-sm font-semibold tracking-[0.1em] text-[#008BCB]"
                 >
-                  PSYCHIATRIC SOCIAL WORKER | MSW | PH.D.
+                  PSYCHIATRIC SOCIAL WORKER | MSW | (PH.D.)
                 </p>
 
                 <span
@@ -420,77 +464,14 @@
         </div>
       </section>
 
-      <!-- MEMBER 05 -->
-      <article
-        class="mt-6 overflow-hidden rounded-[2rem] bg-white shadow-[0_20px_60px_rgba(41,52,135,0.07)]"
-      >
-        <div class="grid lg:grid-cols-[0.42fr_0.58fr]">
-          <div
-            class="relative flex min-h-[300px] items-end overflow-hidden bg-[#008BCB] p-8 sm:p-10 lg:min-h-[430px] lg:p-12"
-          >
-            <div
-              class="absolute -right-20 -top-20 h-56 w-56 rounded-full border border-white/10"
-            ></div>
-            <div
-              class="absolute bottom-8 right-8 text-7xl font-serif text-white/5"
-            >
-              05
-            </div>
-            <div class="relative">
-              <span class="text-xs font-bold tracking-[0.25em] text-white/80">
-                CLINICAL PSYCHOLOGY
-              </span>
-              <p
-                class="mt-5 font-serif text-3xl font-semibold text-white sm:text-4xl"
-              >
-                Psychological
-                <span class="italic text-[#FFB600]"> Care </span>
-              </p>
-            </div>
-          </div>
-
-          <div class="p-8 sm:p-10 lg:p-12">
-            <div
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-[#008BCB] text-sm font-bold text-white"
-            >
-              05
-            </div>
-            <h2
-              class="mt-7 font-serif text-3xl font-semibold text-[#293487] sm:text-4xl"
-            >
-              Dr. Shilpa Pannal
-            </h2>
-            <p
-              class="mt-3 text-sm font-semibold tracking-[0.12em] text-[#008BCB]"
-            >
-              CLINICAL PSYCHOLOGIST
-            </p>
-            <span
-              class="mt-4 inline-flex rounded-full bg-[#f3f7fa] px-4 py-2 text-xs font-semibold text-[#293487]"
-            >
-              15+ Years of Experience
-            </span>
-            <div class="mt-7 h-px w-16 bg-[#FFB600]"></div>
-            <p class="mt-6 text-base leading-8 text-[#596274]">
-              Clinical psychology experience in psychological assessment,
-              counselling and therapeutic support.
-            </p>
-          </div>
-        </div>
-      </article>
-
-      <!-- =========================================================
-           TEAM PERSPECTIVE
-      ========================================================== -->
+      <!-- TEAM PERSPECTIVE -->
       <section class="bg-white px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
         <div class="mx-auto max-w-[1100px] text-center">
           <div class="flex items-center justify-center gap-4">
             <span class="h-px w-10 bg-[#008BCB]"></span>
-
             <p class="text-xs font-bold tracking-[0.3em] text-[#293487]">
               ONE TEAM
             </p>
-
             <span class="h-px w-10 bg-[#008BCB]"></span>
           </div>
 
@@ -511,9 +492,7 @@
         </div>
       </section>
 
-      <!-- =========================================================
-           NEXT STEP
-      ========================================================== -->
+      <!-- NEXT STEP -->
       <section class="bg-[#f3f7fa] px-6 py-20 sm:px-10 lg:px-16 lg:py-24">
         <div class="mx-auto max-w-[1100px]">
           <div
@@ -522,7 +501,6 @@
             <div
               class="absolute -right-24 -top-24 h-64 w-64 rounded-full border border-white/10"
             ></div>
-
             <div
               class="absolute -bottom-32 -left-20 h-64 w-64 rounded-full bg-[#008BCB]/10 blur-3xl"
             ></div>

@@ -312,7 +312,7 @@
           >
             <img
               :src="service.image"
-              :alt="service.title"
+              :alt="service.alt || service.title"
               class="absolute inset-0 h-full w-full object-cover transition duration-[1000ms] ease-out group-hover:scale-105"
             />
             <div
@@ -966,15 +966,16 @@ const services = [
   {
     title: "Individual Counselling",
     href: "#appointment",
-    image:
-      "https://ddurga.dpdns.org/images/psychologist-chennai-consultation.jpg",
+    image: "https://www.iipr.in/images/behavioural_therapist.webp",
+    alt: "Indian female therapist speaking with a male client during an individual counselling session",
     description:
       "Professional support for emotional, behavioural and personal concerns. Our interventions may include CBT-informed techniques, psychoeducation, emotional regulation, behavioural strategies, problem-solving and coping-skills training, depending on individual needs.",
   },
   {
     title: "Family Counselling",
     href: "#appointment",
-    image: "https://www.asrcharitabletrust.org/10.7.png",
+    image: "https://asrcharitabletrust.org/10.10.png",
+    alt: "South Indian family speaking with a male counsellor during a family session",
     description:
       "Understanding relationships, communication and family dynamics. We work with families experiencing communication difficulties, parenting concerns, interpersonal conflicts, behavioural concerns and adjustment difficulties.",
   },
@@ -983,20 +984,25 @@ const services = [
     href: "#appointment",
     image:
       "https://saanthwana.com/assets/images/backgrounds/relationship-counselling.png",
+    alt: "South Indian couple speaking with a female counsellor during a relationship counselling session",
     description:
       "A structured space to understand relationship patterns and develop healthier communication. Sessions may focus on communication, conflict resolution, emotional connection, expectations and relationship adjustment.",
   },
   {
     title: "Child & Adolescent Support",
     href: "#appointment",
-    image: "https://pcprd.azureedge.net/content/7e29a13d2a6a.jpg",
+    image:
+      "https://framerusercontent.com/images/miqhPrapYKTtBeISsUaMGu6s.png?height=1024&width=1024",
+    alt: "South Asian parents and children meeting with a female child psychologist",
     description:
       "Children and adolescents may express emotional difficulties through changes in behaviour, academics, relationships or social functioning. Our approach considers the child, family and environmental context while developing appropriate psychological and psychosocial interventions.",
   },
   {
     title: "Psychological Assessment",
     href: "#appointment",
-    image: "https://www.iipr.in/images/behavioural_therapist.webp",
+    image:
+      "https://saanthwana.com/assets/images/backgrounds/family-counselling.png",
+    alt: "Indian family discussing concerns with a female counsellor during an assessment",
     description:
       "Professional psychological assessment can help develop a clearer understanding of cognitive, emotional, behavioural and personality-related functioning. Assessments are selected according to the individual's clinical requirements.",
   },
@@ -1004,7 +1010,8 @@ const services = [
     title: "De-addiction & Recovery Support",
     href: "#appointment",
     image:
-      "https://cache.careers360.mobi/media/schools/social-media/media-gallery/36322/2025/3/11/Admission.png",
+      "https://www.manobalklinik.com/assets/img/services/best-psychiatrist-doctor2.png",
+    alt: "Indian man attending a supportive mental health counselling session",
     description:
       "Substance-use difficulties require an understanding of the psychological, behavioural and social factors involved in addiction. Support may incorporate Motivational Interviewing, Relapse Prevention, CBT-informed interventions, craving and trigger management, family interventions and psychoeducation.",
   },
@@ -1194,6 +1201,13 @@ const team = [
     description: "Psychiatric evaluation and clinical mental-health care.",
   },
   {
+    name: "Dr. Shilpa Pannal",
+    qualification: "Clinical Psychologist",
+    experience: "15+ Years of Experience",
+    description:
+      "Clinical psychological assessment and evidence-informed therapeutic support for emotional, behavioural and psychological concerns.",
+  },
+  {
     name: "Dr. Mahesh Sanga",
     qualification: "Clinical Psychologist",
     experience: "10+ Years of Experience",
@@ -1201,13 +1215,13 @@ const team = [
   },
   {
     name: "Mr. Gurrapu Rakesh",
-    qualification: "M.Phil. (NIMHANS) | Ph.D.",
+    qualification: "M.Phil. (NIMHANS) | (Ph.D.)",
     description:
       "Psychological and psychosocial interventions with advanced clinical training.",
   },
   {
     name: "Mr. Shiva Kumar Medhari",
-    qualification: "Psychiatric Social Worker | MSW | Ph.D.",
+    qualification: "Psychiatric Social Worker | MSW | (Ph.D.)",
     experience: "8 Years of Experience",
     description:
       "Psychosocial assessment, counselling, family interventions and recovery-oriented support.",

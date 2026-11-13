@@ -237,8 +237,8 @@
 
           <div class="overflow-hidden rounded-3xl shadow-lg">
             <img
-              src="https://static.wixstatic.com/media/5de58e_a0634e41f79a4e6aab377dc2b89fb4a3~mv2.jpg/v1/fill/w_490%2Ch_653%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/5de58e_a0634e41f79a4e6aab377dc2b89fb4a3~mv2.jpg"
-              alt="Child learning and development"
+              src="https://strapi-bucket-cdc.s3.ap-south-1.amazonaws.com/4_511e659b94.jpg"
+              alt="Male child therapist working with a young child"
               class="h-72 w-full object-cover sm:h-96"
               loading="lazy"
             />
@@ -435,7 +435,7 @@ import { useForesightJourney } from "../composables/useForesightJourney.js";
 
 const router = useRouter();
 
-const { state, setService, setStage } = useForesightJourney();
+const { setService, setStage } = useForesightJourney();
 
 onMounted(() => {
   setStage("explore");
@@ -586,7 +586,7 @@ const therapyTopics = [
     description:
       "Identifying unhelpful thoughts and behaviours and developing healthier thinking patterns.",
     image:
-      "https://successunlocking.com/uploads/home/1776776291_07a8b9a2bb8092c7e292.png",
+      "https://fostercdchyderabad.com/assets/img/services/cognitive-behavioural-therapy-02.png",
   },
   {
     title: "Mindfulness Therapy",
@@ -604,8 +604,7 @@ const therapyTopics = [
     title: "Counselling & Psychotherapy",
     description:
       "A supportive environment to explore concerns and develop effective coping skills.",
-    image:
-      "https://ddurga.dpdns.org/images/psychologist-chennai-consultation.jpg",
+    image: "https://images.pexels.com/photos/5699431/pexels-photo-5699431.jpeg",
   },
 ];
 
